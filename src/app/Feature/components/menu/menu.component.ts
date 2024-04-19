@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 })
 export class MenuComponent {
 
-  menuList = routes.map((route)=> route.children ?? []).flat().filter(route => route && !route.path?.includes('**'));
+  menuList = routes.map((route)=> route.children ?? []).flat().filter(route => route && !route.path?.includes('**') && route.path !== 'locationDetail');
 
   constructor() {
 

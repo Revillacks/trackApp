@@ -13,13 +13,19 @@ class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibo
                             <th class="px-6 py-2 text-xs text-gray-500">
                               Ubicaciones
                           </th>
+                          <th class="px-6 py-2 text-xs text-gray-500">
+                            Detalles
+                        </th>
                   </thead>
                   <tbody class="bg-white divide-y divide-gray-300">
                     @for (loc of locations; track $index) {
                       <tr class="whitespace-nowrap">
                           <td class="px-6 py-4 text-sm text-gray-500">
-                            {{loc}}
+                            Lat: {{ loc.lat }}, Lon: {{ loc.lng }}
                           </td>
+                          <td class="px-6 py-4">
+                            <button (click)="getDetail($index)" class="px-4 py-1 text-sm text-indigo-600 bg-indigo-200 rounded-full">Ver detalles</button>
+                        </td>
                     }
                   </tbody>
               </table>

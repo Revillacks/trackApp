@@ -9,6 +9,11 @@ export const routes: Routes = [
         path: 'location',
         title: 'Localización',
         loadComponent: () => import ('./Feature/pages/location/location.component')
+      },
+      {
+        path: 'locationDetail',
+        title: 'DetalleLocalizacion',
+        loadComponent: () => import ('./Feature/pages/locationDetail/locationDetail.component')
       }
 
     ]
